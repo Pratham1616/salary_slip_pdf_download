@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>For Employee</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+    <script>
+        window.onload = function () {
+            document.getElementById("download")
+                .addEventListener("click", () => {
+                    const employee = this.document.getElementById("employee");
+                    var opt = {
+                        margin: [0.5, 0.5, 0.5, 0.5],
+                        filename: 'Employee.pdf',
+                        image: { type: 'jpeg', quality: 0.98 },
+                        html2canvas: { scale: 2 },
+                        jsPDF: { unit: 'in', format: 'letter', orientation: 'landscape' }
+                    };
+                    html2pdf().from(employee).set(opt).save();
+                })
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="">
+        <button class="btn btn-primary" id="download"> download pdf</button>
+    </div>
+
+    <div class="salary-slip" id="employee">
+        <div class="salary-slip-box">
+            <div class="header">
+                <div class="header-left">
+                    <div class="main-heading">Protune Consulting Services LLP</div>
+                    <div class="address">501-C Amaltas, Juhu -Versova Link Road, Andheri West, Mumbai-400053</div>
+                    <div class="sub-heading">SALARY SLIP</div>
+                </div>
+                <div class="employee-right">
+                    <div class="icon">
+                        <img class="employee-img" src="/employee.jpg" alt="icon">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="body-content">
+                <div class="table-1">
+                    <div class="table-top">
+                        <span class="label">PERIOD</span>
+                        <span class="text">June-2024</span>
+                    </div>
+                    <div class="table-box">
+                        <table>
+                            <tr>
+                                <td>Tax Status</td>
+                                <td class="text-align-right">Employee</td>
+                            </tr>
+                            <tr>
+                                <td>Gross Salary</td>
+                                <td class="text-align-right">28033</td>
+                            </tr>
+                            <tr>
+                                <td>TDS</td>
+                                <td class="text-align-right">0</td>
+                            </tr>
+                            <tr>
+                                <td>Professional Tax</td>
+                                <td class="text-align-right">200</td>
+                            </tr>
+                            <tr>
+                                <td>Other Deduction</td>
+                                <td class="text-align-right">0</td>
+                            </tr>
+                            <tr>
+                                <td>Total Taxes and Regular Deductions</td>
+                                <td class="text-align-right">200</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+                <div class="table-2">
+                    <div class="table-top">
+                        <span class="label">NAME</span>
+                        <span class="text">Praveen Kumar</span>
+                    </div>
+                    <div class="table-box">
+                        <table>
+                            <tr>
+                                <td>Leaves Opening Balance</td>
+                                <td class="text-align-right">10</td>
+                            </tr>
+                            <tr>
+                                <td>Leaves Taken</td>
+                                <td class="text-align-right">1</td>
+                            </tr>
+                            <tr>
+                                <td>Leaves accrued</td>
+                                <td class="text-align-right">110</td>
+                            </tr>
+                            <tr>
+                                <td>Leave Balance at the month</td>
+                                <td class="text-align-right">200</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="table-3">
+                    <div class="table-top">
+                        <span class="label">EMPLOYEE ID</span>
+                        <span class="text">OSP021</span>
+                    </div>
+                    <div class="table-box">
+                        <table>
+                            <tr>
+                                <td>Days Worked</td>
+                                <td class="text-align-right">23</td>
+                            </tr>
+                            <tr>
+                                <td>Days in the month</td>
+                                <td class="text-align-right">30</td>
+                            </tr>
+                            <tr>
+                                <td>Unpaid Leaves</td>
+                                <td class="text-align-right">1</td>
+                            </tr>
+                            <tr>
+                                <td>Days Paid</td>
+                                <td class="text-align-right">29</td>
+                            </tr>
+                            <tr>
+                                <td>Gross Pay</td>
+                                <td class="text-align-right">28033</td>
+                            </tr>
+                            <tr>
+                                <td>Total Taxes and Deductions</td>
+                                <td class="text-align-right">200</td>
+                            </tr>
+                        </table>
+                        <div class="table-bottom">
+                            <span class="label">NET PAY</span>
+                            <span class="text">27833</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                This is a system generated receipt. No Signature required.
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
