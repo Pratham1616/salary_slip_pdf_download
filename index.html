@@ -1,10 +1,52 @@
-<html>
-  <head>
-    <title></title>
-  </head>
-  <body>
-    <a href="employee.html">Employee</a>
+<!DOCTYPE html>
+<html lang="en">
 
-    <a href="professional.html">Professional</a>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Download PDFs</title>
+    <style>
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            gap: 20px; /* Added gap between buttons */
+            margin-top: 50px;
+        }
+
+        .btn {
+            width: 150px; /* Adjusted width for better appearance */
+            background-color: blue;
+            border-radius: 30px;
+            padding: 10px;
+            text-align: center; /* Centered text inside the button */
+        }
+
+        .btn a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            display: block; /* Ensures the link takes up the whole button */
+        }
+
+        .btn:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="btn-container">
+        <div class="btn">
+            <a href="employee.html">Employee</a>
+        </div>
+        <div class="btn">
+            <a href="professional.html">Professional</a>
+        </div>
+    </div>
+</body>
+
 </html>
